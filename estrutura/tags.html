@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .img-in-test {
+            width: 50px;
+            height: 44px;
+        }
+    </style>
+
+    <h1>Cabeçalho</h1>
+    <h1>Cabeçalho</h1>
+    <p>Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Deleniti deserunt
+        repudiandae quas ratione ab saepe
+        ipsa odio ipsam cumque quidem aut praesentium,
+        harum labore similique nobis eius sapiente
+        assumenda velit.
+    </p>
+    <hr>
+    <p>
+        <b>Lorem </b> <strong>dolor</strong> sit amet consectetur
+        <a href="https://trello.com/pt-BR" target="_blank">adipisicing</a> elit. Deleniti deserunt
+        <del> quas</del> <ins>ratione</ins> ab saepe
+        <small>ipsa</small> 2<sup>2</sup> H<sub>2</sub>O odio ipsam cumque quidem aut praesentium,
+        harum labor<br> similique nobis eius sapiente
+        assumenda <q>velit</q>.
+
+    </p>
+    <img src="https://tecnoblog.net/wp-content/uploads/2014/10/html5.jpg" class="img-in-test" alt="html5">
+
+    <blockquote> Aqui eu estou fazendo um bloco de citação</blockquote>
+    <hr>
+
+    <p><code>ipsum dolor, sit amet consectetur 
+        adipisicing elit. Ullam mollitia ab eos dolor
+         at numquam minima atque. Dolor quos culpa 
+         voluptatibus mollitia pariatur asperiores 
+        quis incidunt aliquid ex. Ducimus, praesentium?</code></p>
+    <pre>
+            <code>
+                def index(request):
+                    contatos = Contato.objects.order_by('-id').filter(
+                        mostrar=True
+                    )
+                    paginator = Paginator(contatos, 10)
+                    page_number = request.GET.get('p')
+                    contatos = paginator.get_page(page_number)
+                    return render(request, 'contato/index.html', {
+                        'contatos': contatos
+                    })
+            </code>
+        </pre>
+
+</body>
+
+</html>
